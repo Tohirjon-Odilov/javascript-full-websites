@@ -1,0 +1,216 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+
+#nav {
+    position: fixed;
+    width: 100%;
+    z-index: 99;
+    background: white;
+}
+
+.navbar {
+    height: 72px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    position: sticky;
+    top: 0;
+    z-index: 99;
+}
+
+.navbar_container {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    width: 100%;
+    max-width: 1300px;
+    margin: 22px 39px 13px 90px;
+    padding: 0 50px;
+}
+
+#navbar_logo {
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    height: 100%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+}
+
+a#navbar_logo {
+    height: 50px;
+    margin-top: 8px;
+}
+
+.navbar_menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    text-align: center;
+    position: relative;
+    top: 15px;
+    left: 400px;
+}
+
+.navbar_item {
+    height: 80px;
+}
+
+.navbar_item:nth-child(1) {
+    margin-left: -1010px;
+}
+
+.navbar_links {
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    margin: 0 1rem;
+    height: 40px;
+}
+
+.navbar_btn {
+    padding: 0 1rem;
+    margin-right: 10px;
+    min-width: 100px;
+    height: auto;
+    position: relative;
+    top: -20px;
+}
+
+button {
+    min-width: 100px;
+    min-height: 32px;
+    padding: 11px 22px;
+    outline: none;
+    border: none;
+    background: #1B1A1A;
+    font-size: 16px;
+    line-height: 24px;
+    color: #fff;
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.05);
+    border-radius: 13px;
+    transition: all 0.5s;
+    &:hover {
+        opacity: 0.8;
+        transition: all 0.5s;
+    }
+}
+
+.navbar_links:hover {
+    color: #794EFF;
+    transition: all 0.3s ease;
+}
+
+.point {
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1300px) {
+    .navbar_item {
+        height: 0px;
+    }
+    .navbar_item:nth-child(1) {
+        margin-left: 0px;
+    }
+    .navbar_btn {
+        display: none;
+    }
+    .navbar_container {
+        display: flex;
+        justify-content: space-between;
+        height: 80px;
+        z-index: 1;
+        width: 100%;
+        max-width: 1300px;
+        padding: 0;
+        margin: 10px 0 0 0;
+    }
+    .navbar_menu {
+        display: grid;
+        grid-template-columns: auto;
+        width: 100px;
+        height: 100px;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        top: 250px;
+        left: 50%;
+        transform: translate(-50px);
+        opacity: 0;
+        z-index: -1;
+        background: #fff;
+        font-size: 0.1rem;
+        border-radius: 100%;
+        transition: all 0.3s ease;
+    }
+    .navbar_menu.active {
+        width: 100%;
+        margin: 0;
+        padding-bottom: 30px;
+        left: 50px;
+        top: 100%;
+        border-radius: 0%;
+        opacity: 1;
+        transition: all 0.5s ease;
+        z-index: 99;
+        height: 65vh;
+        font-size: 1.6rem;
+        box-shadow: 0px 8px 8px 0px rgba(0, 0, 0, 0.58);
+    }
+    #navbar_logo {
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        height: 100%;
+    }
+    .navbar_toggle .bar {
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        transition: all 0.3s ease-in-out;
+        background: #794EFF;
+    }
+    .navbar_item {
+        width: 100%;
+    }
+    .navbar_links {
+        text-align: center;
+        // padding: 2rem;
+        width: 100%;
+        display: table;
+        margin: 0;
+    }
+    #mobile-menu {
+        position: absolute;
+        top: 20%;
+        right: 5%;
+        transform: translate(5%, 20%);
+    }
+    .navbar_btn {
+        padding-bottom: 2rem;
+    }
+    .navbar_toggle .bar {
+        display: block;
+        cursor: pointer;
+    }
+    #mobile-menu.is-active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    #mobile-menu.is-active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    #mobile-menu.is-active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
