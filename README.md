@@ -1,2 +1,2 @@
-# javascript-full-websites
+# ortiqcha repasitoriya
 Full websites (2022)
